@@ -49,7 +49,6 @@ kotlin {
     }
     sourceSets["jsMain"].dependencies {
         implementation(project(":core_app"))
-        implementation(project(":home_app"))
         implementation("io.kvision:kvision:$kvisionVersion")
         implementation("io.kvision:kvision-bootstrap:$kvisionVersion")
         implementation("io.kvision:kvision-i18n:$kvisionVersion")

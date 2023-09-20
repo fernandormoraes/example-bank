@@ -5,5 +5,4 @@ pluginManagement {
         mavenLocal()
     }
 }
-rootProject.name = "template"
-include("core_app", "home_app")
+rootProject.name = "core_app"

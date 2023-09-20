@@ -1,10 +1,9 @@
-package com.example
+package com.core
 
-import com.core.Manager
+// import com.core.shared.layout.homePage
 import com.core.shared.consts.View
 import com.core.shared.layout.footer
 import com.core.shared.layout.headerNav
-import com.home.shared.layout.homePage
 import io.kvision.Application
 import io.kvision.BootstrapCssModule
 import io.kvision.BootstrapModule
@@ -36,7 +35,7 @@ class App : Application() {
                 if (!state.appLoading) {
                     when (state.view) {
                         View.HOME -> {
-                            homePage()
+                            // homePage()
                         }
                     }
                 }
