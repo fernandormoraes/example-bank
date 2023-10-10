@@ -1,10 +1,12 @@
 package com.example
 
+import com.cards.application.initializeCardsModule
 import com.core.Manager
 import com.core.shared.consts.View
 import com.core.shared.layout.footer
 import com.core.shared.layout.headerNav
-import com.home.shared.layout.homePage
+import com.home.homePage
+import com.statement.application.initializeStatementModule
 import io.kvision.Application
 import io.kvision.BootstrapCssModule
 import io.kvision.BootstrapModule
@@ -26,10 +28,16 @@ class App : Application() {
     }
 
     override fun start() {
-        Routing.init(null, true, "#")
+        val routing = Routing.init(null, true, "#")
+
+        routing.on(View.HOME.url, { _ -> Manager.homePage() })
+                .on(View.CARDS.url, { _ -> Manager.cardsPage() })
+                .on(View.STATEMENT.url, { _ -> Manager.statementPage() })
+
         Pace.init(require("pace-progressbar/themes/green/pace-theme-bounce.css"))
         Pace.setOptions(PaceOptions(manual = true))
         Manager.initialize()
+
         root("kvapp") {
             header().bind(Manager.exampleStore) { state -> headerNav(state) }
             main().bind(Manager.exampleStore) { state ->
@@ -37,6 +45,12 @@ class App : Application() {
                     when (state.view) {
                         View.HOME -> {
                             homePage()
+                        }
+                        View.CARDS -> {
+                            initializeCardsModule()
+                        }
+                        View.STATEMENT -> {
+                            initializeStatementModule()
                         }
                     }
                 }

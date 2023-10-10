@@ -1,5 +1,7 @@
 package com.core.shared.consts
 
 enum class View(val url: String) {
-    HOME("/")
+    HOME("/"),
+    CARDS("/cards"),
+    STATEMENT("/statement")
 }

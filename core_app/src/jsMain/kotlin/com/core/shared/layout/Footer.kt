@@ -11,7 +11,7 @@ fun Container.footer() {
     footer {
         div(className = "container") {
             link("example bank", "#${View.HOME.url}", className = "logo-font")
-            span("An web banking example application ", rich = true, className = "attribution")
+            span("A web banking example application ", rich = true, className = "attribution")
         }
     }
 }

@@ -6,4 +6,4 @@ pluginManagement {
     }
 }
 rootProject.name = "template"
-include("core_app", "home_app")
+include("core_app", "home_app", "cards_app", "statement_app")

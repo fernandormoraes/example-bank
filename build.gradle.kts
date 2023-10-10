@@ -50,6 +50,8 @@ kotlin {
     sourceSets["jsMain"].dependencies {
         implementation(project(":core_app"))
         implementation(project(":home_app"))
+        implementation(project(":cards_app"))
+        implementation(project(":statement_app"))
         implementation("io.kvision:kvision:$kvisionVersion")
         implementation("io.kvision:kvision-bootstrap:$kvisionVersion")
         implementation("io.kvision:kvision-i18n:$kvisionVersion")
@@ -57,7 +59,6 @@ kotlin {
         implementation("io.kvision:kvision-pace:$kvisionVersion")
         implementation("io.kvision:kvision-routing-navigo:$kvisionVersion")
         implementation("io.kvision:kvision-state:$kvisionVersion")
-
     }
     sourceSets["jsTest"].dependencies {
         implementation(kotlin("test-js"))

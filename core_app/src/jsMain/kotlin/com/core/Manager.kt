@@ -17,4 +17,12 @@ object Manager : CoroutineScope by CoroutineScope(Dispatchers.Default + Supervis
     fun homePage() {
         exampleStore.dispatch(ExampleAction.HomePage)
     }
+
+    fun cardsPage(){
+        exampleStore.dispatch(ExampleAction.CardsPage)
+    }
+
+    fun statementPage(){
+        exampleStore.dispatch(ExampleAction.StatementPage)
+    }
 }

@@ -1,4 +1,4 @@
-package com.home.shared.layout
+package com.home
 
 import io.kvision.core.AlignItems
 import io.kvision.core.Container
